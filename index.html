@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBOTEC - Climatização e Refrigeração</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#002B49',
+                            darkBlue: '#004A8F',
+                            blue: '#0072CE',
+                            cyan: '#00A3E0',
+                            lightBg: '#F2F6FA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(224,242,254,0.85) 100%), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .curved-banner {
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Container Principal do Folder Digital -->
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl my-0 sm:my-6 overflow-hidden sm:rounded-2xl border border-gray-200">
+        
+        <!-- CABEÇALHO / HERO SECTION -->
+        <header class="hero-bg px-6 pt-8 pb-12 relative overflow-hidden">
+            <!-- Formas decorativas no topo -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-400 opacity-10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+            <div class="absolute top-0 left-0 w-64 h-64 bg-blue-600 opacity-10 rounded-full blur-3xl -ml-20 -mt-20"></div>
+
+            <!-- LOGO -->
+            <div class="flex flex-col items-center justify-center text-center mb-8 relative z-10">
+                <div class="flex items-center space-x-3 mb-1">
+                    <!-- Ícone de Floco de Neve / Onda Estilizado -->
+                    <div class="relative flex items-center justify-center w-14 h-14 bg-gradient-to-tr from-brand-darkBlue to-brand-cyan rounded-full text-white shadow-lg">
+                        <i class="fa-regular fa-snowflake text-3xl animate-pulse"></i>
+                        <div class="absolute inset-0 rounded-full border-2 border-cyan-300 border-t-transparent animate-spin" style="animation-duration: 10s;"></div>
+                    </div>
+                    <div class="text-left">
+                        <h1 class="text-3xl md:text-5xl font-black tracking-wider text-brand-navy leading-none">
+                            GLOBO<span class="text-brand-cyan">TEC</span>
+                        </h1>
+                        <p class="text-center text-sm md:text-base font-bold tracking-[0.35em] text-brand-darkBlue uppercase border-t border-b border-brand-cyan/40 pt-1 pb-1 mt-1">
+                            Climatização
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TÍTULO PRINCIPAL E SUBTÍTULO -->
+            <div class="text-center max-w-3xl mx-auto relative z-10">
+                <!--<p class="text-sm md:text-base font-bold text-brand-darkBlue uppercase tracking-wider mb-1">
+                    Soluções Completas em
+                </p>
+            -->
+                <h2 class="text-2xl md:text-4xl font-black text-brand-navy uppercase leading-tight mb-3">
+                    Climatização e <span class="text-brand-blue">Refrigeração</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-brand-blue to-brand-cyan mx-auto mb-4 rounded-full"></div>
+                <p class="text-gray-700 font-semibold text-base md:text-xl">
+                    Instalação, manutenção e projetos para residências, comércios e empresas.
+                </p>
+            </div>
+
+            <!-- Imagem Destaque do Equipamento Split -->
+            <!--<div class="mt-8 flex justify-center relative z-10">
+                <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white max-w-2xl">
+                    <img src="./arcondicionado0.jpg" 
+                         alt="Aparelho de Ar Condicionado Moderno" 
+                         class="w-full h-64 md:h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-white text-xs md:text-sm font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-cyan-400"></i> Tecnologia, conforto e eficiência energética
+                        </span>
+                    </div>
+                </div>
+            </div>-->
+        </header>
+
+        <!-- SEÇÃO DE SERVIÇOS PRINCIPAIS (3 COLUNAS) -->
+        <section class="px-4 md:px-8 py-8 bg-brand-lightBg">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- CARD 1: INSTALAÇÃO ESPECIALIZADA -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./arcondicionado.jpg" 
+                                 alt="Instalação Especializada" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-brand-navy/20"></div>
+                        </div>
+                        <!-- Cabeçalho do Card com Ícone -->
+                        <div class="bg-brand-darkBlue p-3 text-white flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-wrench text-cyan-300 text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-sm md:text-base leading-snug uppercase">
+                                Instalação Especializada
+                            </h3>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                                Execução de projetos e instalação de ar condicionado Split, Multi Split, VRF, Cassete e Piso Teto. Correto dimensionamento e desempenho garantidos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2: MANUTENÇÃO PREVENTIVA E CORRETIVA -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./arcondicionado2.jpg"" 
+                                 alt="Manutenção de Ar Condicionado" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-brand-navy/20"></div>
+                        </div>
+                        <!-- Cabeçalho do Card com Ícone -->
+                        <div class="bg-brand-darkBlue p-3 text-white flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-gear text-cyan-300 text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-sm md:text-base leading-snug uppercase">
+                                Manutenção Preventiva e Corretiva
+                            </h3>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                                Diagnóstico ágil, substituição de peças originais e correção de falhas operacionais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3: HIGIENIZAÇÃO E SANITIZAÇÃO -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./arcondicionado3.jpg" 
+                                 alt="Higienização de Ar Condicionado" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-brand-navy/20"></div>
+                        </div>
+                        <!-- Cabeçalho do Card com Ícone -->
+                        <div class="bg-brand-darkBlue p-3 text-white flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-droplet text-cyan-300 text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-sm md:text-base leading-snug uppercase">
+                                Higienização e Sanitização
+                            </h3>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                                Limpeza profunda de serpentinas, turbinas e filtros. Elimina fungos e bactérias para garantir a qualidade do ar interior.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE SISTEMAS INDUSTRIAIS E AVANÇADOS (4 COLUNAS) -->
+        <section class="px-4 md:px-8 py-8 bg-white">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- CARD PMOC -->
+                <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden hover:border-brand-blue transition">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="./arcondicionado3.1.jpg" 
+                             alt="Contratos de Manutenção Preventiva (PMOC)" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-brand-darkBlue/95 p-3 text-white flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-clipboard text-2xl"></i>
+                            </div>
+                            <h3 class="text-sm md:text-base font-extrabold leading-tight uppercase">Contratos de Manutenção Preventiva (PMOC)</h3>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                            Planos personalizados para empresas, com visitas periódicas programadas, relatórios técnicos e atendimento prioritário.
+                        </p>
+                    </div>
+                </div>
+
+                
+
+                <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden hover:border-brand-blue transition">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="./arcondicionado4.jpg" 
+                             alt="Sistema VRF" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-80"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white">
+                            <span class="bg-cyan-500 text-xs font-bold px-2 py-0.5 rounded uppercase">Alta Eficiência</span>
+                            <h3 class="text-xl font-extrabold mt-1">VRF</h3>
+                            <p class="text-xs text-gray-200">(Fluxo de Refrigerante Variável)</p>
+                        </div>
+                    </div>
+                    <div class="p-5 flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-darkBlue text-white flex items-center justify-center shrink-0 shadow">
+                            <i class="fa-solid fa-fan text-xl animate-spin" style="animation-duration: 8s;"></i>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                            Sistema central de ar-condicionado ideal para edifícios médios e grandes, com alta eficiência energética, controle individual por ambiente e grande flexibilidade de instalação.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- CARD CHILLER -->
+                <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden hover:border-brand-blue transition">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="./arcondicionado5.jpg" 
+                             alt="Sistema Chiller" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-80"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white">
+                            <span class="bg-brand-blue text-xs font-bold px-2 py-0.5 rounded uppercase">Grandes Áreas</span>
+                            <h3 class="text-xl font-extrabold mt-1">CHILLER</h3>
+                            <p class="text-xs text-gray-200">(Unidade Resfriadora de Água)</p>
+                        </div>
+                    </div>
+                    <div class="p-5 flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-darkBlue text-white flex items-center justify-center shrink-0 shadow">
+                            <i class="fa-regular fa-snowflake text-xl"></i>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                            Sistema central de climatização indicado para edifícios médios e grandes, que resfria a água e a distribui para o sistema, garantindo alta capacidade de refrigeração e eficiência para grandes áreas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD REFRIGERACAO COMERCIAL -->
+                <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 overflow-hidden hover:border-brand-blue transition">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="./arcondicionado3.2.jpg" 
+                             alt="Refrigeração Comercial" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-brand-darkBlue/95 p-3 text-white flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-snowflake text-2xl"></i>
+                            </div>
+                            <h3 class="text-sm md:text-base font-extrabold leading-tight uppercase">Refrigeração Comercial</h3>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                            Câmara fria, balcão frigorífico, geladeiras e freezers expositores.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- RODAPÉ E CONTATO -->
+        <footer class="bg-gradient-to-b from-brand-darkBlue to-brand-navy text-white pt-8 pb-6 px-4 md:px-8 border-t-4 border-cyan-400">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-b border-white/10 pb-8">
+                
+                <!-- WHATSAPP E NOMES -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://wa.me/5511963364513" target="_blank" title="Falar no WhatsApp" 
+                       class="w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg transform hover:scale-105 transition shrink-0">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <div>
+                        <h4 class="text-lg font-bold text-white tracking-wide">Sergio & Arthur</h4>
+                        <div class="flex flex-col text-sm md:text-base font-bold text-gray-200 mt-1">
+                            <a href="https://wa.me/5511963364513" target="_blank" class="hover:text-green-400 transition flex items-center gap-2">
+                                (11) 96336-4513
+                            </a>
+                            <a href="https://wa.me/5511944928095" target="_blank" class="hover:text-green-400 transition flex items-center gap-2">
+                                (11) 94492-8095
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-MAILS DE CONTATO -->
+                <div class="flex items-start space-x-4 md:border-l md:border-white/20 md:pl-8">
+                    <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-cyan-300 text-2xl shrink-0 mt-1">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="text-base md:text-sm font-semibold text-gray-200 space-y-1">
+                        <a href="mailto:globotec1_adm@hotmail.com" class="block hover:text-cyan-300 transition break-all">
+                            globotec1_adm@hotmail.com
+                        </a>
+                        <a href="mailto:realrefrigeracaoclimatizacao@gmail.com" class="block hover:text-cyan-300 transition break-all">
+                            realrefrigeracaoclimatizacao@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ENDEREÇO / LOCALIZAÇÃO -->
+            <div class="mt-6 flex flex-col md:flex-row items-center justify-center text-center text-xs md:text-sm font-medium text-gray-300 gap-2">
+                <i class="fa-solid fa-location-dot text-cyan-400 text-lg"></i>
+                <span>Estrada da Cabreuva, 02 - Vila Marcondes - Carapicuíba - SP</span>
+                <span class="hidden md:inline">|</span>
+                <span>Cep: 06321-001</span>
+            </div>
+
+            <div class="mt-6 text-center text-[10px] text-gray-400 border-t border-white/5 pt-4">
+                &copy; GLOBOTEC Climatização e Refrigeração - Todos os direitos reservados.
+            </div>
+        </footer>
+
+    </div>
+
+    <a href="https://wa.me/5511963364513" target="_blank" rel="noopener noreferrer" title="Atendimento pelo WhatsApp 24 horas" aria-label="Atendimento pelo WhatsApp 24 horas" class="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-green-500 px-3 py-2 text-white shadow-lg transition hover:scale-105 hover:bg-green-600">
+        <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+        <span class="text-xs font-bold sm:text-sm">Atendimento 24 horas</span>
+    </a>
+
+</body>
+</html>
